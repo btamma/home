@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Home</title>
+    <title>Dr. Bheemarjuna Reddy Tamma - Portfolio</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3b82f6', // Blue-500
+                        primary: '#2563eb', // Blue-600 for a slightly more academic tone
                     }
                 }
             }
@@ -22,66 +22,458 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm py-4">
-        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-primary">btamma</a>
-            <div class="space-x-6">
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center flex-wrap gap-4">
+            <a href="#" class="text-xl font-bold text-primary">Dr. B R Tamma</a>
+            <div class="space-x-4 md:space-x-6 text-sm md:text-base overflow-x-auto whitespace-nowrap pb-1 md:pb-0">
                 <a href="#about" class="text-slate-600 hover:text-primary transition-colors">About</a>
+                <a href="#education" class="text-slate-600 hover:text-primary transition-colors">Education & Experience</a>
+                <a href="#research" class="text-slate-600 hover:text-primary transition-colors">Research</a>
+                <a href="#publications" class="text-slate-600 hover:text-primary transition-colors">Publications</a>
                 <a href="#projects" class="text-slate-600 hover:text-primary transition-colors">Projects</a>
-                <a href="#contact" class="text-slate-600 hover:text-primary transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <main class="flex-grow max-w-4xl mx-auto px-6 py-16 w-full">
-        <section class="text-center md:text-left flex flex-col md:flex-row items-center gap-12 animate-fade-in">
-            <div class="flex-1">
-                <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-slate-900">
-                    Hello, I'm <span class="text-primary">btamma</span>
+    <main class="flex-grow max-w-6xl mx-auto px-6 w-full">
+        <section id="about" class="py-16 flex flex-col-reverse md:flex-row items-center gap-12 border-b border-slate-200">
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900">
+                    Dr. Bheemarjuna Reddy Tamma
                 </h1>
-                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
-                    Welcome to my personal corner of the internet. I'm building things and sharing my journey here.
+                <h2 class="text-2xl text-primary font-semibold mb-4">
+                    Professor
+                </h2>
+                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                    Department of Computer Science & Engineering<br>
+                    Indian Institute of Technology (IIT) Hyderabad
                 </p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 mb-8 text-left">
+                    <h3 class="font-bold text-slate-900 mb-2">Specialization and Expertise</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Wireless networks: Converged radio access networks (Cellular/Wi-Fi), SDN/NFV in 5G, Cloud-RAN, Edge enabled V2X for Autonomous Navigation, Green ICT and Network Security.
+                    </p>
+                    <button id="explainBtn" onclick="explainResearch()" class="mt-4 text-sm bg-blue-50 text-primary border border-blue-200 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors flex items-center gap-2">
+                        ✨ Explain in Simple Terms
+                    </button>
+                    <div id="explainOutput" class="hidden mt-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 text-sm leading-relaxed"></div>
+                </div>
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors shadow-sm">
-                        Get in touch
+                    <a href="mailto:tbr@iith.ac.in" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> tbr@iith.ac.in
                     </a>
-                    <a href="https://github.com/btamma" target="_blank" class="bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors shadow-sm flex items-center gap-2">
-                        <i class="fab fa-github text-lg"></i> GitHub Profile
+                    <a href="https://www.iith.ac.in/~tbr/" target="_blank" class="bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fas fa-globe"></i> Official Website
                     </a>
                 </div>
             </div>
             
-            <!-- Placeholder for profile image -->
-            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-slate-200 border-4 border-white shadow-lg overflow-hidden flex items-center justify-center text-slate-400">
+            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-slate-200 border-4 border-white shadow-lg overflow-hidden flex items-center justify-center text-slate-400 shrink-0">
                 <i class="fas fa-user text-6xl"></i>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="mt-24 pt-12 border-t border-slate-200">
-            <h2 class="text-3xl font-bold mb-6 text-slate-900">About Me</h2>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                <p class="text-slate-600 leading-relaxed">
-                    This is where you can write a little bit about yourself, your background, your skills, and what you are passionate about. You can easily edit this text directly in the HTML file on GitHub.
+        <!-- Education & Experience Grid -->
+        <section id="education" class="py-16 border-b border-slate-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 text-slate-900 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-primary"></i> Educational Qualification
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 border-l-4 border-l-primary">
+                            <h3 class="font-bold text-lg text-slate-800">Ph.D. in Computer Science and Engineering</h3>
+                            <p class="text-slate-600">Indian Institute of Technology Madras, 2007</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 border-l-4 border-l-primary">
+                            <h3 class="font-bold text-lg text-slate-800">M.E. in Computer Science and Engineering</h3>
+                            <p class="text-slate-600">NIT Rourkela, 2002 (1st Rank)</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 border-l-4 border-l-primary">
+                            <h3 class="font-bold text-lg text-slate-800">B.Tech. in Computer Science and Engineering</h3>
+                            <p class="text-slate-600">Andhra University, India, 2000 (2nd Rank)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Experience -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 text-slate-900 flex items-center gap-3">
+                        <i class="fas fa-briefcase text-primary"></i> Professional Experience
+                    </h2>
+                    <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                        
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                                <i class="fas fa-circle text-xs text-primary"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                <div class="font-bold text-primary text-sm mb-1">Sept 2020 - Present</div>
+                                <h3 class="font-bold text-slate-800">Professor</h3>
+                                <p class="text-sm text-slate-600">Dept. of CSE, IIT Hyderabad, India</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                                <i class="fas fa-circle text-xs text-primary"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                <div class="font-bold text-primary text-sm mb-1">Oct 2010 - Sept 2020</div>
+                                <h3 class="font-bold text-slate-800">Assistant/Associate Professor</h3>
+                                <p class="text-sm text-slate-600">Dept. of CSE, IIT Hyderabad, India</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                                <i class="fas fa-circle text-xs text-primary"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                <div class="font-bold text-primary text-sm mb-1">April 2007</div>
+                                <h3 class="font-bold text-slate-800">Post-doctoral Researcher</h3>
+                                <p class="text-sm text-slate-600">CalIT2, UC San Diego, USA</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-200 text-slate-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                                <i class="fas fa-circle text-xs text-primary"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                <div class="font-bold text-primary text-sm mb-1">January 2007</div>
+                                <h3 class="font-bold text-slate-800">Senior Project Officer</h3>
+                                <p class="text-sm text-slate-600">Dept. of CSE, IIT Madras, India</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research & Achievements -->
+        <section id="research" class="py-16 border-b border-slate-200">
+            <h2 class="text-3xl font-bold mb-8 text-slate-900"><i class="fas fa-microscope text-primary mr-2"></i> Research Output & Prototypes</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <div class="bg-blue-50 rounded-2xl p-6 text-center border border-blue-100">
+                    <div class="text-4xl font-extrabold text-primary mb-2">134+</div>
+                    <div class="text-slate-700 font-medium">Publications</div>
+                    <div class="text-sm text-slate-500 mt-1">33 Journal & 101 Conf. Papers</div>
+                </div>
+                <div class="bg-blue-50 rounded-2xl p-6 text-center border border-blue-100">
+                    <div class="text-4xl font-extrabold text-primary mb-2">1850+</div>
+                    <div class="text-slate-700 font-medium">Citations</div>
+                    <div class="text-sm text-slate-500 mt-1">h-index: 20 (Google Scholar)</div>
+                </div>
+                <div class="bg-blue-50 rounded-2xl p-6 text-center border border-blue-100">
+                    <div class="text-4xl font-extrabold text-primary mb-2">9</div>
+                    <div class="text-slate-700 font-medium">Books & Patents</div>
+                    <div class="text-sm text-slate-500 mt-1">3 Book Chapters, 6 Patents (2 granted)</div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-12">
+                <h3 class="text-xl font-bold mb-4 text-slate-900 border-b pb-2">Prototypes, Testbeds & Tools</h3>
+                <p class="text-slate-700 leading-relaxed">
+                    Developed <strong>CogAP</strong> (intelligent Wi-Fi AP device which automatically selects best channel to operate on) and <strong>UCSD-CogNet system</strong> (testbed of two dozen Wi-Fi channel monitoring nodes for spatio-temporal characterization of Wi-Fi traffic) at UC San Diego, USA campus. Testbed of SDN for Wi-Fi load balancing, testbeds of LTE-Wi-Fi interworking (LWIP & LWA), LTE-Wi-Fi co-existence, and Cloud-RAN using OAI platform, a prototype of Telepresence Robo for Healthcare (TRH) and <strong>Min-o-Mee</strong> and <strong>SafeNav</strong> Android Apps at IIT Hyderabad campus. Open source contributions on LWIP on OAI platform, LTE Energy Module in NS-3, and gRPC-SBA based 5G Core.
                 </p>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-6 text-slate-900"><i class="fas fa-award text-amber-500 mr-2"></i> Honors & Awards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <i class="fas fa-trophy text-amber-500 mt-1"></i>
+                    <p class="text-slate-700">Recipient of Best Paper Award at COMSNETS 2022, IEEE ICACCI 2015 and Best Poster Award at IEEE ICACCI 2018</p>
+                </div>
+                <div class="flex gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <i class="fas fa-trophy text-amber-500 mt-1"></i>
+                    <p class="text-slate-700">Recipient of 2nd Best Paper Award at IEEE ANTS 2017</p>
+                </div>
+                <div class="flex gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <i class="fas fa-trophy text-amber-500 mt-1"></i>
+                    <p class="text-slate-700">Recipient of Best Academic Demo Award at COMSNETS 2018</p>
+                </div>
+                <div class="flex gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <i class="fas fa-certificate text-amber-500 mt-1"></i>
+                    <p class="text-slate-700">Recipient of the Elsevier Ad hoc Networks Journal's Top Cited Article 2005-2010 Award</p>
+                </div>
+                <div class="flex gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <i class="fas fa-star text-amber-500 mt-1"></i>
+                    <p class="text-slate-700">Recipient of Visvesvaraya Young Faculty Research Fellowship award for 2016-2020.</p>
+                </div>
+                <div class="flex gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <i class="fas fa-star text-amber-500 mt-1"></i>
+                    <p class="text-slate-700">Recipient of iNautix Research Fellowship during Ph.D. at IIT Madras, 2002-2007.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Publications -->
+        <section id="publications" class="py-16 border-b border-slate-200">
+            <h2 class="text-3xl font-bold mb-8 text-slate-900"><i class="fas fa-book-open text-primary mr-2"></i> Selected Publications</h2>
+            <ul class="space-y-4">
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Maruthi S Inukonda, Atharva Karpate, Bheemarjuna Reddy Tamma, Sparsh Mittal, Praveen Tammana, <span class="font-semibold text-slate-900">“NASCENT: A Non-invasive Solution for Detecting Utilization of Servers in Bare-metal Cloud”</span>, IEEE Access, 2022.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Venkatarami Reddy Ch, Madhura A, Bheemarjuna R Tamma, and Antony Franklin, <span class="font-semibold text-slate-900">“RESTRAIN: A dynamic and cost-efficient resource management scheme for addressing performance interference in NFV-based systems”</span>, Journal of Network and Computer Applications, 2022.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Himank Gupta, Mehul Sharma, Antony Franklin, and Bheemarjuna Reddy Tamma, <span class="font-semibold text-slate-900">"Apt-RAN: A Flexible Split Based 5G RAN to Minimize Energy Consumption and Handovers"</span>, IEEE Transactions on Network and Service Management, Oct, 2019.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Touheed Anwar Atif, Anand M Baswade, Bheemarjuna Reddy Tamma, and Antony Franklin, <span class="font-semibold text-slate-900">"A Complete Solution to LTE-U and Wi-Fi Hidden Terminal Problem"</span>, IEEE Transactions on Cognitive Communications and Networking, June 2019.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Thomas Valerrian Pasca, Sumanta Patro, Bheemarjuna Reddy Tamma, and Antony Franklin A, <span class="font-semibold text-slate-900">"Network Coordination Function for Uplink Traffic Steering in Tightly Coupled LTE Wi-Fi Networks"</span>, Elsevier Computer Networks, vol. 127, pp. 296-316, November 2017.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Anil Kumar R, Thomas V Pasca, and Bheemarjuna R Tamma, <span class="font-semibold text-slate-900">"QoS Aware Load Balance in Software Defined LTE Networks"</span>, Elsevier Computer Communications, vol. 97, January 2017.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Vanlin Sathya, Arun Ramamurthy, Sandeep Kumar S and Bheemarjuna R Tamma, <span class="font-semibold text-slate-900">“On improving SINR in LTE HetNets with D2D Relays”</span>, Elsevier Computer Communications, December 2015.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">T. Bheemarjuna Reddy, B. S. Manoj, and Ramesh R. Rao, <span class="font-semibold text-slate-900">"Traffic Sensing and Characterization in Multi-channel Wireless Networks for Cognitive Networking"</span>, Elsevier Computer Networks, vol. 56, no. 7, pp. 1968–1982, May 2012.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">Chetan K. Verma, T. Bheemarjuna Reddy, et. al, <span class="font-semibold text-slate-900">“A Realistic Small-World Model for Wireless Mesh Networks"</span>, IEEE Communications Letters, vol. 15, no. 4, pp. 455-457, April 2011.</p>
+                </li>
+                <li class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex gap-4 items-start hover:border-blue-200 transition-colors">
+                    <i class="far fa-file-alt text-primary mt-1 text-xl"></i>
+                    <p class="text-slate-700">G. V. Raju, T. Bheemarjuna Reddy, and C. Siva Ram Murthy, <span class="font-semibold text-slate-900">“Adaptive-FEC Based Packet Loss Resilience Scheme for Supporting Voice Communication over Ad hoc Wireless Networks"</span>, IEEE Transactions on Mobile Computing, vol. 7, no. 10, pp. 1184-1199, October 2008.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projects & Synergistic Activities -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold mb-8 text-slate-900"><i class="fas fa-project-diagram text-primary mr-2"></i> Sponsored R&D Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- Project Card -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">JICA, Japan</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">M2Smart: Smart Cities for Emerging Countries based on Sensing, Network and Big Data Analysis...</h3>
+                    <p class="text-sm text-slate-600 mb-4">Co-Project Manager. Duration: 2017-22</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 30 Crores</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">Meity, Govt. of India</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">Converged Cloud Communication Technologies</h3>
+                    <p class="text-sm text-slate-600 mb-4">Co-PI. Duration: 2014-2019</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 24 Crores</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">Meity, Govt. of India</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">Cyber-Physical Systems Innovations Hub</h3>
+                    <p class="text-sm text-slate-600 mb-4">Co-PI. Duration: 2011-2016</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 17.6 Crores</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">Intel India</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">CCRAN: Energy Efficiency in Converged Cloud Radio Next Generation Access Network</h3>
+                    <p class="text-sm text-slate-600 mb-4">PI. Duration: 2018-21</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 116 Lakhs</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">MoE SPARC</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">Network Slice Life-cycle Management for 5G Mobile Network</h3>
+                    <p class="text-sm text-slate-600 mb-4">Co-PI. Duration: 2019-21</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 80 Lakhs</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">NASSCOM</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">DNS/IPv6 for IoT Security</h3>
+                    <p class="text-sm text-slate-600 mb-4">PI. Duration: 2018-19</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 24.4 Lakhs</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">Uurmi Systems</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">Wireless Networks</h3>
+                    <p class="text-sm text-slate-600 mb-4">Consultancy PI. Duration: 2013-14</p>
+                    <div class="font-semibold text-emerald-600">Funding: Rs. 7.2 Lakhs</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-xs font-bold text-primary uppercase tracking-wide mb-2">KDDI R&D Labs, Japan</div>
+                    <h3 class="font-bold text-slate-900 mb-2 leading-tight">Multi-link communication technology</h3>
+                    <p class="text-sm text-slate-600 mb-4">PI. Duration: 2012-13</p>
+                    <div class="font-semibold text-emerald-600">Funding: USD 15,000</div>
+                </div>
+            </div>
+
+            <!-- Synergistic Activities -->
+            <div class="bg-slate-100 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-4 text-slate-900"><i class="fas fa-users text-primary mr-2"></i> Synergistic Activities</h3>
+                <ul class="list-disc list-inside text-slate-700 space-y-2">
+                    <li>General co-chair of NCC 2018, TCP co-chair for IEEE ANTS 2015, TCP vice chair for IEEE ANTS 2014 conference and Ph.D. student forum co-chair for IEEE ANTS 2013.</li>
+                    <li>Organizing committee member of IIT Hyderabad’s 2-day Workshop on Cyber-Physical Systems: Applications and Open Challenges, Hyderabad, India, March 2013.</li>
+                    <li>Organizing committee member of GCCS workshop on Cyber Security, Hyderabad, November 2017.</li>
+                </ul>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-slate-900 text-slate-400 py-12 mt-12 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-white text-xl font-bold mb-4">Let's Connect</h3>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="#" class="hover:text-white transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
-                <a href="https://github.com/btamma" class="hover:text-white transition-colors text-2xl"><i class="fab fa-github"></i></a>
-                <a href="#" class="hover:text-white transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-auto text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Contact Information</h3>
+                <p class="mb-1"><i class="fas fa-map-marker-alt w-5 text-center mr-2"></i> Kandi, Telangana, India, 502284</p>
+                <p class="mb-1"><i class="fas fa-phone w-5 text-center mr-2"></i> +91-40-2301 6354</p>
+                <p><i class="fas fa-envelope w-5 text-center mr-2"></i> <a href="mailto:tbr@iith.ac.in" class="hover:text-white transition-colors">tbr@iith.ac.in</a></p>
             </div>
-            <p>&copy; 2026 btamma. Built with HTML and Tailwind CSS.</p>
+            <div class="md:text-right">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 mb-6 w-full text-left shadow-lg">
+                    <h4 class="text-white font-semibold mb-2 flex items-center gap-2">✨ AI Collaboration Pitch</h4>
+                    <p class="text-xs text-slate-400 mb-3">Want to collaborate? Let AI draft an outreach email connecting your research to Dr. Tamma's expertise.</p>
+                    <input type="text" id="visitorResearch" placeholder="Your research area (e.g. Machine Learning)" class="w-full bg-slate-900 border border-slate-600 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-primary mb-3 transition-colors">
+                    <button id="draftBtn" onclick="draftEmail()" class="w-full bg-primary text-white text-sm px-4 py-2 rounded hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
+                        ✨ Draft Email
+                    </button>
+                    <div id="emailDraftContainer" class="hidden mt-4">
+                        <textarea id="emailDraft" class="w-full bg-slate-900 border border-slate-600 rounded px-3 py-2 text-xs text-slate-300 h-40 focus:outline-none focus:border-primary mb-2"></textarea>
+                        <button onclick="copyEmail(event)" class="text-xs bg-slate-700 hover:bg-slate-600 text-white px-3 py-1 rounded transition-colors w-full">Copy to Clipboard</button>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end gap-6 mb-6">
+                    <a href="https://www.iith.ac.in/~tbr/" target="_blank" class="hover:text-white transition-colors text-2xl" title="Official Website"><i class="fas fa-globe"></i></a>
+                    <a href="http://goo.gl/JdgRB" target="_blank" class="hover:text-white transition-colors text-2xl" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+                <p>&copy; 2026 Dr. B R Tamma. Hosted on GitHub Pages.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Gemini API Integration Scripts -->
+    <script>
+        const apiKey = ""; // Automatically provided in the execution environment
+
+        async function callGeminiAPI(prompt, systemContext = "") {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            
+            const defaultSystemInstruction = "You are a helpful AI assistant embedded in the academic portfolio of Dr. Bheemarjuna Reddy Tamma, a Professor at IIT Hyderabad specializing in Wireless Networks, 5G, and IoT. Keep responses professional, concise, and highly relevant.";
+            
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemContext || defaultSystemInstruction }] }
+            };
+
+            let delay = 1000;
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    
+                    const result = await response.json();
+                    return result.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
+                } catch (error) {
+                    if (i === 4) {
+                        console.error("Gemini API Error:", error);
+                        return "Error: Unable to connect to AI service. Please try again later.";
+                    }
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+            }
+        }
+
+        // Feature 1: Explain Research
+        async function explainResearch() {
+            const btn = document.getElementById('explainBtn');
+            const output = document.getElementById('explainOutput');
+            
+            if(!output.classList.contains('hidden') && output.innerHTML !== "") {
+                output.classList.add('hidden');
+                return;
+            }
+
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Generating explanation...`;
+            btn.disabled = true;
+            output.classList.remove('hidden');
+            output.innerHTML = `<div class="animate-pulse flex space-x-4"><div class="flex-1 space-y-2"><div class="h-2 bg-slate-200 rounded"></div><div class="h-2 bg-slate-200 rounded w-5/6"></div><div class="h-2 bg-slate-200 rounded w-4/6"></div></div></div>`;
+
+            const prompt = "Explain the following academic research areas in simple, engaging terms for a general audience, focusing on their real-world impact: Converged radio access networks (Cellular/Wi-Fi), SDN/NFV in 5G, Cloud-RAN, Edge enabled V2X for Autonomous Navigation.";
+            
+            const responseText = await callGeminiAPI(prompt);
+            
+            // Simple markdown-to-html for bolding text
+            const formattedText = responseText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            output.innerHTML = formattedText;
+            btn.innerHTML = `✨ Hide Explanation`;
+            btn.disabled = false;
+            
+            btn.onclick = () => {
+                output.classList.toggle('hidden');
+                btn.innerHTML = output.classList.contains('hidden') ? `✨ Explain in Simple Terms` : `✨ Hide Explanation`;
+            };
+        }
+
+        // Feature 2: AI Email Drafter
+        async function draftEmail() {
+            const input = document.getElementById('visitorResearch');
+            const visitorResearch = input.value.trim();
+            const btn = document.getElementById('draftBtn');
+            const container = document.getElementById('emailDraftContainer');
+            const textArea = document.getElementById('emailDraft');
+
+            if (!visitorResearch) {
+                input.classList.add('border-red-500', 'placeholder-red-400');
+                const oldPlaceholder = input.placeholder;
+                input.placeholder = "Required: Enter your research area";
+                setTimeout(() => {
+                    input.classList.remove('border-red-500', 'placeholder-red-400');
+                    input.placeholder = oldPlaceholder;
+                }, 3000);
+                return;
+            }
+
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Drafting...`;
+            btn.disabled = true;
+            container.classList.remove('hidden');
+            textArea.value = "AI is thinking and drafting your email...";
+
+            const prompt = `Draft a concise, professional cold outreach email to Dr. Bheemarjuna Reddy Tamma (Professor at IIT Hyderabad specializing in Wireless Networks, 5G, SDN/NFV, Edge V2X). 
+            The sender is a fellow researcher/professional specializing in: ${visitorResearch}. 
+            The goal is to briefly introduce themselves and propose a potential research collaboration exploring the intersection of their fields. Do not include subject line placeholders, just output the email body directly. Keep it under 150 words.`;
+            
+            const systemContext = "You are an expert academic networking assistant. Write concise, polite, and compelling outreach emails.";
+            
+            const responseText = await callGeminiAPI(prompt, systemContext);
+            
+            textArea.value = responseText.trim();
+            btn.innerHTML = `✨ Draft Another Email`;
+            btn.disabled = false;
+        }
+
+        function copyEmail(event) {
+            const textArea = document.getElementById('emailDraft');
+            textArea.select();
+            document.execCommand('copy');
+            
+            const copyBtn = event.target;
+            const originalText = copyBtn.innerText;
+            copyBtn.innerText = "Copied!";
+            setTimeout(() => copyBtn.innerText = originalText, 2000);
+        }
+    </script>
 </body>
 </html>
