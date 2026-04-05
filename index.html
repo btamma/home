@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Home</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // Blue-500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-primary">btamma</a>
+            <div class="space-x-6">
+                <a href="#about" class="text-slate-600 hover:text-primary transition-colors">About</a>
+                <a href="#projects" class="text-slate-600 hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="text-slate-600 hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-16 w-full">
+        <section class="text-center md:text-left flex flex-col md:flex-row items-center gap-12 animate-fade-in">
+            <div class="flex-1">
+                <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-slate-900">
+                    Hello, I'm <span class="text-primary">btamma</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                    Welcome to my personal corner of the internet. I'm building things and sharing my journey here.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors shadow-sm">
+                        Get in touch
+                    </a>
+                    <a href="https://github.com/btamma" target="_blank" class="bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors shadow-sm flex items-center gap-2">
+                        <i class="fab fa-github text-lg"></i> GitHub Profile
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Placeholder for profile image -->
+            <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-slate-200 border-4 border-white shadow-lg overflow-hidden flex items-center justify-center text-slate-400">
+                <i class="fas fa-user text-6xl"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mt-24 pt-12 border-t border-slate-200">
+            <h2 class="text-3xl font-bold mb-6 text-slate-900">About Me</h2>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <p class="text-slate-600 leading-relaxed">
+                    This is where you can write a little bit about yourself, your background, your skills, and what you are passionate about. You can easily edit this text directly in the HTML file on GitHub.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-400 py-12 mt-12 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="text-white text-xl font-bold mb-4">Let's Connect</h3>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="hover:text-white transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/btamma" class="hover:text-white transition-colors text-2xl"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-white transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2026 btamma. Built with HTML and Tailwind CSS.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
